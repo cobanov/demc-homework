@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, redirect, request, flash
-from .database.db_utils import connect_db, retrieve_data, write_data
+from database import db_utils
+from app import queries
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret key'
@@ -10,13 +11,26 @@ app.config['SECRET_KEY'] = 'secret key'
 def home():
     """ some codes """
 
-    write_data(connect_db(), "entries",)
     return render_template("index.html")
 
 
-@app.route("/entries", methods=["GET", "POST"])
-def entries():
+@app.route("/rick", methods=["GET", "POST"])
+def rick():
+    """ some codes """
+    conn = db_utils.connect_db()
+    top_avg = db_utils.read_data(conn, queries.top_avg)
+    worst_avg = db_utils.read_data(conn, queries.worst_avg)
+    # top_vote = db_utils.read_data(conn, queries.top_vote)
+    # worst_vote = db_utils.read_data(conn, queries.worst_vote)
+    # results = [top_avg, worst_avg, top_vote, worst_vote]
+    results = [top_avg, worst_avg]
+
+    print(results)
+    return render_template("rick.html", results=results)
+
+
+@app.route("/general", methods=["GET", "POST"])
+def general():
     """ some codes """
 
-    entries = retrieve_data(connect_db(), collection="entries")
-    return render_template("entries.html", entries=entries)
+    return render_template("general.html")

@@ -1,0 +1,40 @@
+{% extends 'index.html' %} {% block content %}
+<div class="top">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/2880px-Rick_and_Morty.svg.png"
+    alt=""
+    width="500px"
+  />
+</div>
+
+<div class="entries">
+  {% for result, time in results %} Takes time: {{time}}
+
+  <table>
+    <tr>
+      <th>tconst</th>
+      <th>parentTconst</th>
+      <th>seasonNumber</th>
+      <th>episodeNumber</th>
+      <th>averageRating</th>
+      <th>numVotes</th>
+    </tr>
+
+    {% for tconst, parentTconst, seasonNumber, episodeNumber, _, averageRating,
+    numVotes in result %}
+    <tr>
+      <th>{{tconst}}</th>
+      <th>{{parentTconst}}</th>
+      <th>{{seasonNumber}}</th>
+      <th>{{episodeNumber}}</th>
+      <th>{{averageRating}}</th>
+      <th>{{numVotes}}</th>
+    </tr>
+
+    {% endfor %}
+  </table>
+  <br />
+  {%endfor%}
+</div>
+
+{% endblock %}

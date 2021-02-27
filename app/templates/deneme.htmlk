@@ -1,0 +1,36 @@
+{% extends 'index.html' %} {% block content %}
+
+<div class="entries">
+  <ol>
+    <!-- For loop logic of jinja template -->
+    {% for i in results %}
+    <li>{{i}}</li>
+    {%endfor%}
+  </ol>
+
+  <table style="width: 100%">
+    <tr>
+      <th>tconst</th>
+      <th>parentTconst</th>
+      <th>seasonNumber</th>
+      <th>episodeNumber</th>
+      <th>averageRating</th>
+      <th>numVotes</th>
+    </tr>
+
+    {% for tconst, parentTconst, seasonNumber, episodeNumber, _, averageRating,
+    numVotes in results %}
+    <tr>
+      <th>{{tconst}}</th>
+      <th>{{parentTconst}}</th>
+      <th>{{seasonNumber}}</th>
+      <th>{{episodeNumber}}</th>
+      <th>{{averageRating}}</th>
+      <th>{{numVotes}}</th>
+    </tr>
+
+    {% endfor %}
+  </table>
+</div>
+
+{% endblock %}

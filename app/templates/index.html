@@ -11,17 +11,16 @@
 
   <body>
     <div class="text">
-      <a href="/">
-        <h1>Main Page</h1>
-      </a>
+      <h1>DEMC Homework</h1>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a class="active" href="">Home</a></li>
+        <li><a href="/rick">Rick</a></li>
+        <li><a href="/general">General</a></li>
+      </ul>
     </div>
 
-    <form action="/entries">
-      <input type="submit" value="Get Entries" />
-    </form>
-
-    {% block content %}
-    <p>Please hit the button to retrieve entries!</p>
-    {% endblock %}
+    {% block content %} {% endblock %} {% block general %} {% endblock %}
   </body>
 </html>
