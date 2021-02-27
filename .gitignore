@@ -1,0 +1,6 @@
+
+/venv
+
+*.tsv
+*.gz
+*.pyc
