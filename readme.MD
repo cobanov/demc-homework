@@ -20,6 +20,10 @@ Asagidaki kod kurulum icin ihtiyaciniz olan kutuphanelerin kurulumunu yapacaktir
 pip install -r requirements.txt
 ```
 
+```bash
+brew install --cask mysql-connector-python
+```
+
 ### 1) MySQL Kurulumu
 
 Mac cihazlar icin en kolay MySQL kurulumu brew uzerinden yapilmaktadir.

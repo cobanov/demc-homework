@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+  flask-app:
+    container_name: dc-flask-app
+    build: .
+    ports:
+      - "5000:5000"
+
+  mongodb:
+    image: "mongo"
+    ports: 
+      - 27017:27017

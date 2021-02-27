@@ -82,12 +82,12 @@ ASC
 LIMIT 5;
 ```
 
-2. Genel Sorulari
+## 2. Genel Sorulari
 
-1) 2000-2010 arasında oyuncularından biri tarafından yönetilmiş filmlerin
+1. 2000-2010 arasında oyuncularından biri tarafından yönetilmiş filmlerin
    listesi
 
-2) 2000 yılından günümüze bir filmde müzik departmanında da yer almış
+2. 2000 yılından günümüze bir filmde müzik departmanında da yer almış
    aktrislerin listesi
 
-3) 4 ya da daha fazla aktris bulunduran filmlerin sayısı
+3. 4 ya da daha fazla aktris bulunduran filmlerin sayısı

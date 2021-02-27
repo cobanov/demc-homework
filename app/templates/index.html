@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <title>Main Page</title>
+  </head>
+
+  <body>
+    <div class="text">
+      <a href="/">
+        <h1>Main Page</h1>
+      </a>
+    </div>
+
+    <form action="/entries">
+      <input type="submit" value="Get Entries" />
+    </form>
+
+    {% block content %}
+    <p>Please hit the button to retrieve entries!</p>
+    {% endblock %}
+  </body>
+</html>

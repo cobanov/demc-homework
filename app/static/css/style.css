@@ -1,0 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+body {
+  background-color: black;
+  font-family: "Ubuntu";
+  color: white;
+}
+
+.text {
+  color: white;
+}
