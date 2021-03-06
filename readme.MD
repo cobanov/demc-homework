@@ -28,7 +28,7 @@ pip install -r requirements.txt
 brew install --cask mysql-connector-python
 ```
 
-### 1. MySQL Kurulumu
+### 2. MySQL Kurulumu
 
 Mac cihazlar icin en kolay MySQL kurulumu brew uzerinden yapilmaktadir.
 
@@ -83,13 +83,17 @@ source /Users/mertcobanoglu/Repos/demc-homework/database/import_data.sql
 
 ### 3. Webapp Flask
 
+Heroku deploymenti icin uyumlu olmasi adina flask appini ana dizinden calistirmak kolaylik sagliyor. Ayni zamanda webapp asagidaki komut ile calistirilabilir. `localhost:5000` adresinden ziyaret edilecektir.
+
 ```bash
 python3 wsgi.py
 ```
 
 ### 4. Heroku
 
-Tanimlayici bir seyler yazilacak
+Heroku deploymenti icin [database](database) klasoru altindaki [db_utils.py](database/db_utils.py) dosyasinda veritabani baglanti degiskenleri AWS RDS'den alinan bilgilerle degistirilmelidir. Bu bilgiler db bilgilerini kaynak koda eklememek adina config vars altinda environmental variables olarak girilmesi tavsiye edilir.
+
+![](assets/heroku.png)
 
 ## Dataset
 
