@@ -10,7 +10,7 @@ Sectigim dizi `Rick and Morty` oldugu icin oncelikle `title_basics` tablosundan 
 select * from title_basics where originalTitle='Rick and Morty'
 ```
 
-![](img/rick.png)
+![](https://github.com/cobanov/demc-homework/raw/main/solutions/img/rick.png)
 
 ```
 tconst -> tt2861424
@@ -22,7 +22,7 @@ Bu sorunun cozumu icin yukarida buldugumuz `tconst`'a sahip tum episodelari bulm
 select * from episodes where parentTconst='tt2861424'
 ```
 
-![](img/rm_episodes.png)
+![](https://github.com/cobanov/demc-homework/raw/main/solutions/img/rm_episodes.png)
 Goruldugu gibi `parentTconst` ilgili dizinin benzersiz kodunu tutarken, bu kez tconst ilgili bolumun ismini tutuyor. `ratings` tablosuyla eslesen vote ve rate degerlerini join etmemiz gerekiyor.
 
 Bu tabloyu asagidaki cogu yerde kullanacagiz isleri kolay hale getirmek icin bu episodelarin tutuldugu SQL sorgusundan bir VIEW yaratalim.

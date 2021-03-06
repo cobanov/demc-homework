@@ -98,13 +98,13 @@ python3 wsgi.py
 
 Heroku deploymenti icin [database](database) klasoru altindaki [db_utils.py](database/db_utils.py) dosyasinda veritabani baglanti degiskenleri AWS RDS'den alinan bilgilerle degistirilmelidir. Bu bilgiler db bilgilerini kaynak koda eklememek adina config vars altinda environmental variables olarak girilmesi tavsiye edilir.
 
-![](assets/heroku.png)
+![](https://github.com/cobanov/demc-homework/raw/main/assets/heroku.png)
 
 ## Dataset
 
 ### 0. Dump Linki:
 
-[GDrive](google.com) Upload in progress, will be updated.
+[GDrive](https://drive.google.com/file/d/1ao6tvnN0qKzhKAFaRHurfj_u2sLbO08y/view?usp=sharing)
 
 ### 1. Start a mariadb server instance
 
