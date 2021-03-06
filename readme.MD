@@ -22,6 +22,13 @@ Asagidaki kod kurulum icin ihtiyaciniz olan kutuphanelerin kurulumunu yapacaktir
 pip install -r requirements.txt
 ```
 
+- mariadb
+- requests
+- beautifulsoup4
+- mysql-connector-python
+- flask
+- gunicorn
+
 ```bash
 brew install --cask mysql-connector-python
 ```
