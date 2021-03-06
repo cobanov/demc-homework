@@ -1,7 +1,5 @@
 # DEMC Homework
 
-Foobar is a Python library for dealing with word pluralization.
-
 ## Kullanim
 
 Sorularin cozumleri [solutions](/solutions) klasoru altindaki readme dosyasinda detayli bir sekilde anlatilmistir. ayni zamanda farkli klasorlerin altinda daha detayli bilgiye ulasmak icin o bolumlerdeki readme dosyalari okunmasi onerilir.
@@ -96,6 +94,10 @@ Heroku deploymenti icin [database](database) klasoru altindaki [db_utils.py](dat
 ![](assets/heroku.png)
 
 ## Dataset
+
+### 0. Dump Linki:
+
+[GDrive](google.com) Upload in progress, will be updated.
 
 ### 1. Start a mariadb server instance
 
