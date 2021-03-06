@@ -1,2 +1,49 @@
-{% extends 'index.html' %} {% block general %}
-{% endblock %}
+{% extends 'index.html' %} {% block content %}
+<div class="seven_a">
+  <h3>
+    7a. 2000-2010 arasında oyuncularından biri tarafından yönetilmiş filmlerin
+    listesi
+  </h3>
+
+  <div class="seven_b">
+    <h3>
+      7b. 2000 yılından günümüze bir filmde müzik departmanında da yer almış
+      aktrislerin listesi
+    </h3>
+
+    Elapsed Time: {{seven_b[1]}}
+    <br />
+    <br />
+    <table>
+      <tr>
+        <th>tconst</th>
+        <th>parentTconst</th>
+        <th>seasonNumber</th>
+        <th>episodeNumber</th>
+        <th>averageRating</th>
+        <th>numVotes</th>
+      </tr>
+
+      {% for tconst, parentTconst, seasonNumber, episodeNumber, averageRating,
+      numVotes in seven_b[0] %}
+      <tr>
+        <th>{{tconst}}</th>
+        <th>{{parentTconst}}</th>
+        <th>{{seasonNumber}}</th>
+        <th>{{episodeNumber}}</th>
+        <th>{{averageRating}}</th>
+        <th>{{numVotes}}</th>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  <br />
+  <div class="c">
+    <h3>7c. 4 ya da daha fazla aktris bulunduran filmlerin sayısı</h3>
+    Elapsed Time: {{seven_c[1]}}
+    <br />
+    Cevap: {{seven_c[1]}}
+  </div>
+
+  {% endblock %}
+</div>

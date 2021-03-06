@@ -5,10 +5,16 @@
     alt=""
     width="500px"
   />
+
+  <h3>
+    <ul>a. Seçtiğiniz dizinin IMDB average rating'i en yüksek olan 5 bölümü</ul>
+    <ul>b. Seçtiğiniz dizinin IMDB average rating'i en düşük olan 5 bölümü</ul>
+    <ul>c. Seçtiğiniz dizinin IMDB'de en çok kişi tarafından oylanmış 5 bölümü </ul>
+    <ul>d. Seçtiğiniz dizinin IMDB'de en az kişi tarafından oylanmış 5 bölümü</ul>
 </div>
 
 <div class="entries">
-  {% for result, time in results %} Takes time: {{time}}
+  {% for result, time in results %} Elapsed time: {{time}}
 
   <table>
     <tr>
