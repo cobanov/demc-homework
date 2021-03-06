@@ -5,13 +5,39 @@
 -- ========================================= --
 
 
-SET FOREIGN_KEY_CHECKS = 0;
-SET UNIQUE_CHECKS = 0;
-
 LOAD DATA LOCAL INFILE  '/Users/mertcobanoglu/Repos/demc-homework/datasets/title.akas.tsv' IGNORE
 INTO TABLE akas
 COLUMNS TERMINATED BY '\t'
 IGNORE 1 LINES;
 
-SET UNIQUE_CHECKS = 1;
-SET FOREIGN_KEY_CHECKS = 1;
+LOAD DATA LOCAL INFILE  '/Users/mertcobanoglu/Repos/demc-homework/datasets/title.basics.tsv' IGNORE
+INTO TABLE akas
+COLUMNS TERMINATED BY '\t'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE  '/Users/mertcobanoglu/Repos/demc-homework/datasets/title.crew.tsv' IGNORE
+INTO TABLE akas
+COLUMNS TERMINATED BY '\t'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE  '/Users/mertcobanoglu/Repos/demc-homework/datasets/title.episode.tsv' IGNORE
+INTO TABLE akas
+COLUMNS TERMINATED BY '\t'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE  '/Users/mertcobanoglu/Repos/demc-homework/datasets/title.principals.tsv' IGNORE
+INTO TABLE akas
+COLUMNS TERMINATED BY '\t'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE  '/Users/mertcobanoglu/Repos/demc-homework/datasets/title.ratings.tsv' IGNORE
+INTO TABLE akas
+COLUMNS TERMINATED BY '\t'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE  '/Users/mertcobanoglu/Repos/demc-homework/datasets/name.basics.tsv' IGNORE
+INTO TABLE akas
+COLUMNS TERMINATED BY '\t'
+IGNORE 1 LINES;
+
+

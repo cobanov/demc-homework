@@ -84,10 +84,40 @@ LIMIT 5;
 
 ## 2. Genel Sorulari
 
-1. 2000-2010 arasında oyuncularından biri tarafından yönetilmiş filmlerin
-   listesi
+1. 2000-2010 arasında oyuncularından biri tarafından yönetilmiş filmlerin listesi (Cozulmedi)
+
+```sql
+-- Selected Years shows online movies
+-- create table selected_years as select tconst, originalTitle from title_basics where titleType='movie' and startYear > 2000 and startYear < 2010
+
+-- Selected only directos and acts
+-- create table director_actor as select tconst, nconst, category, characters from principals where category in ('director', 'actor', 'actress')
+
+-- joined together directors and acts with movies
+-- create table years_all as select selected_years.tconst, originalTitle, nconst, category, characters from selected_years left join director_actor on selected_years.tconst = director_actor.tconst
+
+-- only directors within selected years
+-- create table years_directors as select * from years_all where category='director'
+
+-- only acts within selected years
+-- create table years_acts as select * from years_all where category in ('actor', 'actress')
+
+--
+-- select * from years_directors inner join years_acts on (years_directors.nconst = years_acts.nconst and years_directors.tconst = years_acts.tconst)
+```
 
 2. 2000 yılından günümüze bir filmde müzik departmanında da yer almış
    aktrislerin listesi
 
+```sql
+SELECT * FROM name_basics WHERE birthYear > 2000 AND primaryProfession LIKE '%music_department%' AND primaryProfession LIKE '%actress%'
+```
+
 3. 4 ya da daha fazla aktris bulunduran filmlerin sayısı
+
+```sql
+create table four_actress as select tconst, count('category') as cnt from principals where category='actress' group by tconst having cnt >= 4
+
+select count(*) from four_actress
+
+```

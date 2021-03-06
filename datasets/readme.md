@@ -7,6 +7,7 @@ Starting a MariaDB instance is simple:
 `docker run --name imdb -p 3306:3306 -e MYSQL_ROOT_PASSWORD=55347314 linuxserver/mariadb`
 
 `brew install mariadb`
+
 `pip3 install mariadb`
 
 # IMDb Datasets
